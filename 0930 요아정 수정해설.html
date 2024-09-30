@@ -27,7 +27,7 @@
         #wrap .menu > ul > li:hover > a::after{transform: scaleX(1);}
 
         #wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 100px;width: 100%;z-index: 1;background: #fff;}
-        #wrap .menu > ul:hover .sub{height: 320px;padding: 20px 0;}
+        #wrap .menu > ul:hover .sub{height: 110px;padding: 20px 0;}
         #wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
         #wrap .menu > ul .sub li:hover a{color: #F63C5A;display: block;}
         .bg{position: absolute;left: 0;top: 100px;background-color: #fff;width: 100%;height: 0;transition: 0.5s;border-top: 1px solid transparent;}
@@ -46,8 +46,9 @@
 
         #wrap .imgbox{display: flex;justify-content: center;position: relative;gap: 20px;height: 250px;align-items: center;}
         #wrap .imgbox ul{display: flex;text-align: center;}
-        #wrap .imgbox img{width: 80%;}
-        #wrap .imgbox p.txt_bg{width: 159px;height: 51px;background-image: url(images/name_box.png);background-size: contain;background-repeat: no-repeat;text-align: center;line-height: 51px;margin: 0 auto;}
+        #wrap .imgbox img{width: 90%;padding: 0 0 10px;}
+        #wrap .imgbox p.txt_bg{width: 159px;height: 51px;background-image: url(images/name_box.png);background-size: contain;background-repeat: no-repeat;text-align: center;line-height: 46px;margin: 0 auto;font-size: 19px;color: #111;font-weight: 600;}
+        #wrap .imgbox p:nth-child(3){padding: 15px 0;}
 
         #wrap .imgbox ul li > p{font-size: 18px;color: #111;}
         #wrap .imgbox ul p{font-size: 15px;color: #777;}
@@ -57,8 +58,12 @@
         #wrap .middle .yyic{
             padding-top: 150px; 
         }
-        #wrap .middle .text{text-align: center;}
+        #wrap .middle .text{text-align: center;padding-bottom: 30px;}
         #wrap .middle .text img{width: 573px;height: 170px;}
+        #wrap .middle .text ul{font-size: 20px;display: flex;justify-content: center;list-style: none;padding: 0;}
+        #wrap .middle .text ul li{margin: 0 20px;}
+        #wrap .middle .text ul li::after{content: "|";width: 1px;margin-left: 10px;color: #999;}
+        #wrap .middle .text ul li:last-child::after{content: "";}
 
         #wrap .bottom{width: 100%;height: 339px; background: linear-gradient(#FFB89F, #FF889C);}
         #wrap .bottom ul li{color: #fff;}
@@ -67,10 +72,10 @@
         #wrap .bottom ul{text-align: center;padding: 60px;}
 
         .allmenubox{width: 1200px;height: 100%;display: flex;justify-content: center;align-items: center;margin: 0 auto;}
-        .allmenubox .menus{display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(6,auto);gap: 20px;width: 80%;}
+        .allmenubox .menus{display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(6,auto);gap: 20px;width: 100%;padding-bottom: 80px;}
         .item{display: flex;flex-direction: column;align-items: center;padding: 10px;font-size: 18px;text-align: center;}
         .item img{width: 237px;height: 237px;object-fit: contain;margin-bottom: 10px;}
-        .item p{margin: 0;border: 1px solid #000;border-radius: 10px;width: 100%;}
+        .item p{margin: 0;border: 1px solid #000;border-radius: 10px;width: 100%;height: 33px;}
 
     </style>
 </head>
@@ -130,7 +135,6 @@
                     <li><a href="">그릭요거트</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="menulistbox">
             <div class="txt">
@@ -168,7 +172,7 @@
                     <li>
                     <li>
                         <div>
-                            <p><img src="images/jam.png" alt=""></p>
+                            <p><img src="images/ban.png" alt=""></p>
                             <p class="txt_bg">바나나</p>
                             <p>부드러운 달콤함, 바나나!</p>
                         </div>
