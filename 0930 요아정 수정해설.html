@@ -17,17 +17,18 @@
         #wrap .logo a{display: block;width: 100%;height: 100%;background-image: url(images/logonew.png);background-repeat: no-repeat;background-size: 128px 80px;position: absolute;top: 50%;transform: translateY(-50%);}
 
         #wrap .menu{float: right;padding: 20px;}
-        #wrap .menu > ul{height: 50px;}
+        #wrap .menu ul{height: 20px;}
         #wrap .menu > ul > li{float: left;position: relative;width: 142px;}
+        #wrap .menu > ul > li:last-child {height: 142px;}
         #wrap .menu > ul > li:last-child a{padding: 20px;}
         #wrap .menu > ul > li:nth-child(6) a{width: 102px;height: 40px;}
         #wrap .menu > ul > li > a{display: block;line-height: 100px;text-align: center;}
         #wrap .menu > ul > li > a:hover{color: #F63C5A;font-weight: bold;}
-        #wrap .menu > ul > li > a::after{content: "";position: absolute;left: 30px; bottom: 0;width: 60%;height: 10px;border-radius: 20px 20px 0 0 ; background-color: #FFE7E7;transform: scaleX(0);transition: 0.5s;}
+        #wrap .menu > ul > li > a::after{content: "";position: absolute;left: 30px; bottom: 10px;width: 60%;height: 10px;border-radius: 20px 20px 0 0 ; background-color: #FFE7E7;transform: scaleX(0);transition: 0.5s;}
         #wrap .menu > ul > li:hover > a::after{transform: scaleX(1);}
 
-        #wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 100px;width: 100%;z-index: 1;background: #fff;}
-        #wrap .menu > ul:hover .sub{height: 110px;padding: 20px 0;}
+        #wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 110px;width: 100%;z-index: 1;background: #fff;}
+        #wrap .menu > ul:hover .sub{height: 130px;padding: 10px 0;}
         #wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
         #wrap .menu > ul .sub li:hover a{color: #F63C5A;display: block;}
         .bg{position: absolute;left: 0;top: 100px;background-color: #fff;width: 100%;height: 0;transition: 0.5s;border-top: 1px solid transparent;}
@@ -47,35 +48,41 @@
         #wrap .imgbox{display: flex;justify-content: center;position: relative;gap: 20px;height: 250px;align-items: center;}
         #wrap .imgbox ul{display: flex;text-align: center;}
         #wrap .imgbox img{width: 90%;padding: 0 0 10px;}
-        #wrap .imgbox p.txt_bg{width: 159px;height: 51px;background-image: url(images/name_box.png);background-size: contain;background-repeat: no-repeat;text-align: center;line-height: 46px;margin: 0 auto;font-size: 19px;color: #111;font-weight: 600;}
+        #wrap .imgbox p.txt_bg{width: 159px;height: 51px;background-image: url(images/name_box.png);background-size: contain;background-repeat: no-repeat;text-align: center;line-height: 40px;margin: 0 auto;font-size: 19px;color: #111;font-weight: 600;}
         #wrap .imgbox p:nth-child(3){padding: 15px 0;}
 
         #wrap .imgbox ul li > p{font-size: 18px;color: #111;}
         #wrap .imgbox ul p{font-size: 15px;color: #777;}
 
-        #wrap .middle{background: url(images/backgroundall.png);}
+        #wrap .middle{background: url(images/backgroundall.png) no-repeat;background-size: cover;}
         #wrap .middle .middle_inner{width: 1200px;margin: 0 auto;padding-top: 150px;}
         #wrap .middle .yyic{
             padding-top: 150px; 
         }
         #wrap .middle .text{text-align: center;padding-bottom: 30px;}
         #wrap .middle .text img{width: 573px;height: 170px;}
-        #wrap .middle .text ul{font-size: 20px;display: flex;justify-content: center;list-style: none;padding: 0;}
+        #wrap .middle .text ul{font-size: 20px;display: flex;justify-content: center;list-style: none;}
         #wrap .middle .text ul li{margin: 0 20px;}
         #wrap .middle .text ul li::after{content: "|";width: 1px;margin-left: 10px;color: #999;}
         #wrap .middle .text ul li:last-child::after{content: "";}
 
-        #wrap .bottom{width: 100%;height: 339px; background: linear-gradient(#FFB89F, #FF889C);}
-        #wrap .bottom ul li{color: #fff;}
-        #wrap .bottom ul li:last-child{padding: 20px;}
-        #wrap .bottom ul li img{width: 107px;padding-bottom: 20px;}
-        #wrap .bottom ul{text-align: center;padding: 60px;}
-
-        .allmenubox{width: 1200px;height: 100%;display: flex;justify-content: center;align-items: center;margin: 0 auto;}
-        .allmenubox .menus{display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(6,auto);gap: 20px;width: 100%;padding-bottom: 80px;}
+       
+        .allmenubox{width: 1200px;height: 100%;display: flex;justify-content: center;align-items: center;margin: 0 auto;flex-direction: column;background-position: center;}
+        .allmenubox .menus{display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(6,auto);gap: 20px;width: 100%;}
+        
         .item{display: flex;flex-direction: column;align-items: center;padding: 10px;font-size: 18px;text-align: center;}
         .item img{width: 237px;height: 237px;object-fit: contain;margin-bottom: 10px;}
-        .item p{margin: 0;border: 1px solid #000;border-radius: 10px;width: 100%;height: 33px;}
+        .item p{margin: 0;border: 1px solid #000;border-radius: 10px;width: 100%;height: 32px;line-height: 30px;}
+
+        .plus{text-align: center; display: flex;justify-content: center;align-items: center;padding-bottom: 80px;}
+        .plus p{border-radius: 50%;height: 65px;width: 65px;line-height: 65px; background-color: #F63C5A;color: #fff;}
+
+        #wrap .bottom{width: 100%;height: 339px; background: linear-gradient(#FFB89F, #FF889C);}
+    #wrap .bottom ul li{color: #fff;}
+    #wrap .bottom ul li:last-child{padding: 20px;}
+    #wrap .bottom ul li img{width: 107px;padding-bottom: 20px;}
+    #wrap .bottom ul{text-align: center;padding: 60px;}
+    
 
     </style>
 </head>
@@ -211,6 +218,7 @@
                     <div class="item"><img src="images/m11.png" alt=""><p>민트팝팝세트</p></div>
                     <div class="item"><img src="images/m12.png" alt=""><p>오레오+오레오크럼블+몰티져스</p></div>
                 </div>
+            <div class="plus"><p>더보기</p></div>
             </div>
         </div>
     </div>
