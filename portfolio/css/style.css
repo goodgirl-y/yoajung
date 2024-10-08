@@ -1,0 +1,38 @@
+*{margin: 0;padding: 0;}
+body{background-color: #C44436;}
+a{text-decoration: none;}
+ul{list-style: none;}
+    .wrap{height: 100vh;}
+        .wrap > page{width: 1200px;margin: 0 auto;}
+        p,h1,h4,li{color: #fff;}
+        .page{margin: 30px;height: 900px;}
+        .one_page > .top{display: flex;justify-content: space-between;padding: 20px 10px;}
+        .one_page h1{font-size: 170px;padding: 200px 0;}
+
+        
+        .all{width: 1200px;margin: 0 auto; display: flex;gap: 5px;height: 800px;}
+        .two_page .myprofile{padding: 40px;text-align: center;margin: 0 auto;}
+        .two_page .myprofile>img{width: 225px;height: 282px;border-radius: 100px 100px 0 0;display: block;margin: 30px auto;}
+        .two_page .myprofile ul{display: flex;justify-content: center;}
+        .two_page .myprofile li:first-child{font-size: 25px;}
+        .two_page .myprofile li:last-child{font-size: 16px;margin: 13px 5px;}
+        .two_page .myprofile p{font-size: 18px;margin: 5px;}
+        .two_page h4{font-size: 25px;margin-bottom: 60px;}
+
+        .two_page .profile_two{display: flex;flex-direction: column;margin: 20px 10px;}
+        .two_page .profile_two .jm{text-align: center;margin: 100px 100px;}
+        .two_page .profile_two ul,.profile_three ul{margin-bottom: 20px;}
+        .two_page .profile_two ul{margin-bottom: 100px;}
+        .two_page .profile_two li,.profile_three li{font-size: 1rem;margin-bottom: 5px;}
+        .two_page .profile_two li:first-child,.profile_three li:first-child{font-weight: bold; font-size: 1.5rem;margin-bottom: 10px;}
+
+
+        .two_page .profile_three img{width: 47px;}
+        .two_page .profile_three ul li:last-child .imgbox{display: flex;justify-content: center;gap: 20px;}
+        .two_page .profile_three ul{margin-bottom: 130px;margin-top: 80px;}
+        .two_page .profile_three ul li ul{margin-bottom: 115px;}
+
+
+        .three_page{margin: 100px; display: flex;flex: 20 80; align-items: center;}
+        .three_page .left{margin: 100px 0;}
+        .three_page .right{margin: 100px 0;}

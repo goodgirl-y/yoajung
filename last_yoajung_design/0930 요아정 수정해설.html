@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{color: #333;text-decoration: none;}
+        html,body{overflow-x: hidden;}
+        body{background-color: #fff;}
+        .healthy{opacity: 0.5;position: absolute;}
+        #wrap{width: 100%;}
+        #wrap header{height: 100px;}
+        #wrap header .top{width: 1200px;margin: 0 auto;}
+        #wrap .logo{float: left;width: 128px; height: 80px;position: relative;top: 15px;}
+        #wrap .logo a{display: block;width: 100%;height: 100%;background-image: url(images/logonew.png);background-repeat: no-repeat;background-size: 128px 80px;position: absolute;top: 50%;transform: translateY(-50%);}
+
+        #wrap .menu{float: right;padding: 20px;}
+        #wrap .menu ul{height: 20px;}
+        #wrap .menu > ul > li{float: left;position: relative;width: 142px;}
+        #wrap .menu > ul > li:last-child {height: 142px;}
+        #wrap .menu > ul > li:last-child a{padding: 20px;}
+        #wrap .menu > ul > li:nth-child(6) a{width: 102px;height: 40px;}
+        #wrap .menu > ul > li > a{display: block;line-height: 100px;text-align: center;}
+        #wrap .menu > ul > li > a:hover{color: #F63C5A;font-weight: bold;}
+        #wrap .menu > ul > li > a::after{content: "";position: absolute;left: 30px; bottom: 10px;width: 60%;height: 10px;border-radius: 20px 20px 0 0 ; background-color: #FFE7E7;transform: scaleX(0);transition: 0.5s;}
+        #wrap .menu > ul > li:hover > a::after{transform: scaleX(1);}
+
+        #wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 110px;width: 100%;z-index: 1;background: #fff;}
+        #wrap .menu > ul:hover .sub{height: 130px;padding: 10px 0;}
+        #wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
+        #wrap .menu > ul .sub li:hover a{color: #F63C5A;display: block;}
+        .bg{position: absolute;left: 0;top: 100px;background-color: #fff;width: 100%;height: 0;transition: 0.5s;border-top: 1px solid transparent;}
+
+        /*#wrap .mainbox{width: 960px;height: 175px;}*/
+        #wrap .mainbox{width: 1100px;margin: 0 auto;}
+        #wrap .mainbox .main_menu h2{font-size: 80px;font-weight: bold; color: #F63C5A;text-align: center;}
+
+        #wrap .mainbox .menulist{width: 529px;height: 30px; margin: 0 auto;padding: 40px 0;}
+        #wrap .mainbox .menulist ul{display: flex;justify-content: center;gap: 80px;font-weight: bold;}/*한글_작은토핑시그니처*/
+        #wrap .mainbox .menulist ul li a{color: #777;}
+        #wrap .mainbox .menulist ul li:hover a{color: #F63C5A;}
+        #wrap .menulistbox{display: flex;margin: 0 auto;padding: 50px 0;width: 1400px;margin:0 auto;gap: 50px;}/*토핑사진줄*/
+        #wrap .menulistbox .txt{text-align: center;width: 286px;height: 317px;}/*영어_작은토핑초코*/
+        #wrap .menulistbox .txt h3{font-size: 55px;}/*영어_큰토핑*/
+        #wrap .menulistbox .txt p{font-size: 20px;color: #555;line-height: 40px;cursor: pointer;position: relative;}/*영어_작은초코칩*/
+        #wrap .menulistbox .txt p:hover{color: #111;}
+        #wrap .menulistbox .txt p::after{content: "";width: 50px;height: 50px;color: #FFCE4F;border-radius: 20px;bottom: 10px;justify-content: center;position: absolute;display: block;}
+
+        #wrap .imgbox{display: flex;justify-content: center;position: relative;gap: 20px;height: 250px;align-items: center;}
+        #wrap .imgbox ul{display: flex;text-align: center;}
+        #wrap .imgbox img{width: 90%;padding: 0 0 10px;}
+        #wrap .imgbox p.txt_bg{width: 159px;height: 51px;background-image: url(images/name_box.png);background-size: contain;background-repeat: no-repeat;text-align: center;line-height: 40px;margin: 0 auto;font-size: 19px;color: #111;font-weight: 600;}
+        #wrap .imgbox p:nth-child(3){padding: 15px 0;}
+
+        #wrap .imgbox ul li > p{font-size: 18px;color: #111;}
+        #wrap .imgbox ul p{font-size: 15px;color: #777;}
+      
+
+        #wrap .middle{background-image: url(images/backgroundall.png);background-size: cover;position: relative;background-color: red;}
+        #wrap .middle .middle_inner{width: 1200px;margin: 0 auto;padding-top: 200px;}
+        #wrap .middle .yyic{position: relative;top: 140px;width: 2000px;white-space: nowrap; animation-iteration-count: infinite;animation-name: yyic; animation-timing-function: linear;animation-direction: alternate;margin: 0 auto;
+       }
+       #wrap .middle .yyic img{animation: yyic 3s linear infinite;}
+       @keyframes yyic {
+        0%{transform: translateX(0);}
+        100%{transform: translateX(300px);}
+        
+       }
+
+
+        #wrap .middle .text{text-align: center;padding-bottom: 30px;}
+        #wrap .middle .text img{width: 573px;height: 170px;}
+        #wrap .middle .text ul{font-size: 20px;display: flex;justify-content: center;list-style: none;}
+        #wrap .middle .text ul li{margin: 0 20px;}
+        #wrap .middle .text ul li::after{content: "|";width: 1px;margin-left: 10px;color: #999;}
+        #wrap .middle .text ul li:last-child::after{content: "";}
+        .text ul li:hover a{color: #F63C5A;font-weight: 550;}
+
+       
+        .allmenubox{width: 1200px;height: 100%;display: flex;justify-content: center;align-items: center;margin: 0 auto;flex-direction: column;background-position: center;}
+        .allmenubox .menus{display: grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(6,auto);gap: 20px;width: 100%;}
+        .allmenubox .menus .item{position: relative;cursor: pointer;}
+        .allmenubox .menus .item .box{width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);color: #fff;position: absolute;left: 0;top: 0;transition: 0.2s;border-radius: 40px 0 40px 0;text-align: left;opacity: 0;}
+        .allmenubox .menus .item .box > p{padding: 30px 20px; font-size: 15px;}
+        .allmenubox .menus .item:hover .box{transform: 1;opacity: 1;}
+        
+        .item{display: flex;flex-direction: column;align-items: center;padding: 10px;font-size: 18px;text-align: center;}
+        .item img{width: 237px;height: 237px;object-fit: contain;margin-bottom: 10px;}
+        .item > p{margin: 0;border: 1px solid #000;border-radius: 10px;width: 100%;height: 32px;line-height: 30px;}
+
+        .plus{text-align: center; display: flex;justify-content: center;align-items: center;padding-bottom: 80px;cursor: pointer;}
+        .plus p{border-radius: 50%;height: 65px;width: 65px;line-height: 65px; background-color: #F63C5A;color: #fff;}
+        .plus p:hover{background: #FFCE4F;height: 65px;width: 65px;border-radius: 50%;color: #F63C5A;font-weight: 500;}
+
+        #wrap .bottom{width: 100%;height: 339px; background: linear-gradient(#FFB89F, #FF889C);}
+    #wrap .bottom ul li{color: #fff;}
+    #wrap .bottom ul li:last-child{padding: 20px;}
+    #wrap .bottom ul li img{width: 107px;padding-bottom: 20px;}
+    #wrap .bottom ul{text-align: center;padding: 60px;}
+    
+
+    </style>
+</head>
+<body>
+    <div class="healthy"><img src="images/b_32.png" alt=""></div>
+    <div id="wrap">
+        <header>
+                <div class="top">
+                <div class="logo"><a href="#"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">브랜드</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드소개</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#">메뉴&매장</a>
+                        <ul class="sub">
+                            <li><a href="#">메뉴</a></li>
+                            <li><a href="#">매장</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#">멤버쉽</a>
+                        <ul class="sub">
+                            <li><a href="#">멤버쉽 혜택</a></li>
+                            <li><a href="#">멤버쉽 단계</a></li>
+                            <li><a href="#">앱APP</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">창업</a>
+                            <ul class="sub">
+                                <li><a href="#">창업 성공사례</a></li>
+                                <li><a href="#">가맹문의</a></li>
+                            </ul>
+                    </li>
+                        <li><a href="#"><img src="images/ping.png" alt=""></a>
+                    </li>
+                    </ul>
+                <div class="bg"></div>
+            </div>
+                </div>
+               
+        </header>
+        <div class="mainbox">
+            <div class="main_menu"><h2>Yogurt Icecream's Menu</h2></div>
+            <div class="menulist">
+                <ul>
+                    <li><a href="">토핑</a></li>
+                    <li><a href="">시그니처</a></li>
+                    <li><a href="">Best Menu</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menulistbox">
+            <div class="txt">
+                <h3>TOPPING</h3>
+                <p>CHOCO</p>
+                <p>CHIPS</p>
+                <p>FRUIT</p>
+                <p>POPS</p>
+            </div>
+            <div class="imgbox">
+                <p>
+                    <img src="images/left.png" alt="">
+                </p>
+                <ul>
+                    <li>
+                        <div class="fruit">
+                            <p><img src="images/jam.png" alt=""></p>
+                            <p class="txt_bg">자몽</p>
+                            <p>상큼하고 달달한 빨간 생자몽!</p>
+                        </div>
+                    <li>
+                    <li>
+                        <div class="fruit">
+                            <p><img src="images/str.png" alt=""></p>
+                            <p class="txt_bg">딸기</p>
+                            <p>달콤함의 정석, 생딸기!</p>
+                        </div>
+                    <li>
+                    <li>
+                        <div class="fruit">
+                            <p><img src="images/fin.png" alt=""></p>
+                            <p class="txt_bg">파인애플</p>
+                            <p>새콤달콤 이국적인 맛, 파인애플!</p>
+                        </div>
+                    <li>
+                    <li>
+                        <div class="fruit">
+                            <p><img src="images/ban.png" alt=""></p>
+                            <p class="txt_bg">바나나</p>
+                            <p>부드러운 달콤함, 바나나!</p>
+                        </div>
+                    <li>
+                </ul>
+                <p>
+                    <img src="images/right.png" alt="">
+                </p>
+            </div>
+        </div>
+        
+    <div class="middle">
+        <!-- <img src="images/backgroundall.png" alt=""> -->
+        <p class="yyic"><img src="images/yyic.png" alt=""><img src="images/yyic.png" alt=""><img src="images/yyic.png" alt=""><img src="images/yyic.png" alt=""><img src="images/yyic.png" alt=""><img src="images/yyic.png" alt=""></p>
+        <div class="middle_inner">
+            
+            <div class="text">
+                <p><img src="images/menutxt.png" alt=""></p>
+                <ul>
+                    <li><a href="#">요거트 아이스크림</a></li>
+                    <li><a href="#">그릭요거트</a></li>
+                </ul>
+            </div>
+            <div class="allmenubox">
+                <div class="menus">
+                    <div class="item"><img src="images/m1.png" alt=""><p>치즈큐브+딸기</p>
+                        <div class="box"><p><strong>말린샤인머스캣</strong>
+<br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                        당류 [ 20.01g ]  단백질 [ 0.792g ]
+                        지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+<br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                            당류 [ 21.6g ]  단백질 [ 0.09g ]
+                            지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m2.png" alt=""><p>오렌지+자몽+벌집꿀</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]  당류 [ 20.01g ]  단백질 [ 0.792g ] 지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]  당류 [ 21.6g ]  단백질 [ 0.09g ]지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m3.png" alt=""><p>민트팝팝</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]  당류 [ 20.01g ]  단백질 [ 0.792g ] 지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong><br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]  당류 [ 21.6g ]  단백질 [ 0.09g ] 지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m4.png" alt=""><p>후르츠링+샤인머스캣</p>
+                        <div class="box"><p><strong>말린샤인머스캣</strong><br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ] 당류 [ 20.01g ]  단백질 [ 0.792g ]  지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]  당류 [ 21.6g ]  단백질 [ 0.09g ] 지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m5.png" alt=""><p>말린샤인머스캣+벌집꿀</p>
+                        <div class="box"><p><strong>말린샤인머스캣</strong><br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]  당류 [ 20.01g ]  단백질 [ 0.792g ]  지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]당류 [ 21.6g ]  단백질 [ 0.09g ]  지방 [ 0g ]  나트륨 [ 8.1g ]</p></div>
+                    </div>
+                    <div class="item"><img src="images/m6.png" alt=""><p>초콜릿</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                                                당류 [ 20.01g ]  단백질 [ 0.792g ]
+                                                지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                                                    당류 [ 21.6g ]  단백질 [ 0.09g ]
+                                                    지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m7.png" alt=""><p>자몽+후르츠링+벌집꿀</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                                                당류 [ 20.01g ]  단백질 [ 0.792g ]
+                                                지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                                                    당류 [ 21.6g ]  단백질 [ 0.09g ]
+                                                    지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m8.png" alt=""><p>초코쉘+딸기팝팝</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                                                당류 [ 20.01g ]  단백질 [ 0.792g ]
+                                                지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                                                    당류 [ 21.6g ]  단백질 [ 0.09g ]
+                                                    지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m9.png" alt=""><p>파인애플+키위+벌집꿀</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                                                당류 [ 20.01g ]  단백질 [ 0.792g ]
+                                                지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                                                    당류 [ 21.6g ]  단백질 [ 0.09g ]
+                                                    지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m10.png" alt=""><p>딸기</p><div class="box"><p><strong>말린샤인머스캣</strong>
+                        <br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]
+                                                당류 [ 20.01g ]  단백질 [ 0.792g ]
+                                                지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong> 
+                        <br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]
+                                                    당류 [ 21.6g ]  단백질 [ 0.09g ]
+                                                    지방 [ 0g ]  나트륨 [ 8.1g ]</p></div></div>
+                    <div class="item"><img src="images/m11.png" alt=""><p>민트팝팝세트</p>
+                        <div class="box"><p><strong>말린샤인머스캣</strong><br>1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]  당류 [ 20.01g ]  단백질 [ 0.792g ]지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong><br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]  당류 [ 21.6g ]  단백질 [ 0.09g ] 지방 [ 0g ]  나트륨 [ 8.1g ]</p></div>
+                    </div>
+                    <div class="item"><img src="images/m12.png" alt=""><p>오레오+오레오크럼블+몰티져스</p>
+                        <div class="box"><p><strong>말린샤인머스캣</strong><br> 1회 제공량 [ 30g ]  열량 [ 89.1kcal(1회) ]  당류 [ 20.01g ]  단백질 [ 0.792g ] 지방 [ 0.15g ]  나트륨 [ 8.1g ]</p><p><strong>벌집꿀</strong><br> 1회 제공량 [ 30g ]  열량 [ 91.1kcal(1회) ]  당류 [ 21.6g ]  단백질 [ 0.09g ] 지방 [ 0g ]  나트륨 [ 8.1g ]</p></div>
+                    </div>
+                </div>
+            <div class="plus"><p>더보기</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <ul>
+            <li><img src="images/footer_01.png" alt=""></li>
+            <li>주식회사 트릴리언즈  대표자 박진주   사업자번호 696-86-02195  주소 서울특별시 성동구 광나루로 130, 11층 1108호</li>
+            <li>제휴 문의 awesomebrosis@naver.com</li>
+            <li>Copyright ⓒ 요거트아이스크림의정석. all Right Reserved.</li>
+        </ul>
+    </div>
+    </div>
+</body>
+</html>

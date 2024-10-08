@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        #wrap header {
+            height: 80px;
+        }
+
+        #wrap header .top {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #wrap .logo {
+            float: left;
+            width: 128px;
+            height: 80px;
+            position: relative;
+            top: 15px;
+        }
+
+        #wrap .logo a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/logonew.png);
+            background-repeat: no-repeat;
+            background-size: 128px 80px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* 로고그림 부위 정한거임 */
+        #wrap .menu {
+            float: right;
+            padding: 20px;
+        }
+
+        #wrap .menu>ul {
+            height: 50px;
+        }
+
+        #wrap .menu>ul>li {
+            float: left;
+            position: relative;
+            width: 142px;
+        }
+
+        #wrap .menu>ul>li:last-child a {
+            padding: 20px;
+        }
+
+        #wrap .menu>ul>li:nth-child(6) a {
+            width: 102px;
+            height: 40px;
+        }
+
+        #wrap .menu>ul>li>a {
+            display: block;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        #wrap .menu>ul>li>a:hover {
+            color: #F63C5A;
+            font-weight: bold;
+        }
+
+        #wrap .menu>ul>li>a::after {
+            content: "";
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            width: 60%;
+            height: 10px;
+            border-radius: 20px 20px 0 0;
+            background-color: #FFE7E7;
+            transform: scaleX(0);
+            transition: 0.5s;
+        }
+
+        #wrap .menu>ul>li:hover>a::after {
+            transform: scaleX(1);
+        }
+
+        #wrap .menu>ul .sub {
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #wrap .menu>ul:hover .sub {
+            height: 320px;
+            padding: 20px 0;
+        }
+
+        #wrap .menu>ul .sub li {
+            line-height: 40px;
+            text-align: center;
+        }
+
+        #wrap .menu>ul .sub li:hover a {
+            color: #F63C5A;
+            display: block;
+        }
+
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            background-color: #fff;
+            width: 100%;
+            height: 0;
+            transition: 0.5s;
+            border-top: 1px solid transparent;
+        }
+
+        /*#wrap .mainbox{width: 960px;height: 175px;}*/
+        #wrap .mainbox {
+            width: 1100px;
+            height: 180px;
+            margin: 0 auto;
+        }
+
+        #wrap .mainbox .main_menu h2 {
+            font-size: 80px;
+            font-weight: bold;
+            color: #F63C5A;
+            text-align: center;
+        }
+
+        #wrap .mainbox .menulist {
+            width: 529px;
+            height: 30px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        #wrap .mainbox .menulist ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-weight: bold;
+        }
+
+        /*한글_작은토핑시그니처*/
+        #wrap .mainbox .menulist ul li a {
+            color: #777;
+        }
+
+        #wrap .mainbox .menulistbox {
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            padding: 50px 0;
+        }
+
+        /*토핑사진줄*/
+        #wrap .mainbox .menulistbox .txt {
+            text-align: center;
+            width: 286px;
+            height: 317px;
+        }
+
+        /*영어_작은토핑초코*/
+        #wrap .mainbox .menulistbox .txt h3 {
+            font-size: 55px;
+        }
+
+        /*영어_큰토핑*/
+        #wrap .mainbox .menulistbox .txt p {
+            font-size: 20px;
+            color: #555;
+            line-height: 40px;
+        }
+
+        /*영어_작은초코칩*/
+        #wrap .mainbox .imgbox {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        #wrap .mainbox .imgbox ul {
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        #wrap .mainbox .imgbox ul:nth-child(1) img {}
+
+        #wrap .mainbox .imgbox ul li>p {
+            font-size: 18px;
+            color: #111;
+        }
+
+        #wrap .mainbox .imgbox ul li:nth-child(2) img {
+            padding: 10px;
+        }
+
+        #wrap .mainbox .imgbox ul p {
+            font-size: 15px;
+            color: #777;
+            padding: 4px;
+        }
+
+        #wrap .middle {
+            width: 1900px;
+        }
+
+        #wrap .middle img:first-child {
+            width: 100%;
+            height: 1524px;
+            padding: 700px 0;
+        }
+
+        #wrap .middle img:nth-child(2) {}
+
+        #wrap .middle .text img {
+            width: 573px;
+            height: 170px;
+        }
+
+        #wrap .bottom {
+            width: 100%;
+            height: 339px;
+            background: linear-gradient(#FFB89F, #FF889C);
+        }
+
+        #wrap .bottom ul li {
+            color: #fff;
+        }
+
+        #wrap .bottom ul li:last-child {
+            padding: 20px;
+        }
+
+        #wrap .bottom ul li img {
+            width: 107px;
+            padding-bottom: 20px;
+        }
+
+        #wrap .bottom ul {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .allmenubox {
+            width: 1200px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .allmenubox .menus {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, auto);
+            gap: 20px;
+            width: 80%;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .item img {
+            width: 237px;
+            height: 237px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            margin: 0;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <div class="logo"><a href="#"></a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">브랜드</a>
+                            <ul class="sub">
+                                <li><a href="#">브랜드소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴&매장</a>
+                            <ul class="sub">
+                                <li><a href="#">메뉴</a></li>
+                                <li><a href="#">매장</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">멤버쉽</a>
+                            <ul class="sub">
+                                <li><a href="#">멤버쉽 혜택</a></li>
+                                <li><a href="#">멤버쉽 단계</a></li>
+                                <li><a href="#">앱APP</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">커뮤니티</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">창업</a>
+                            <ul class="sub">
+                                <li><a href="#">창업 성공사례</a></li>
+                                <li><a href="#">가맹문의</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="images/ping.png" alt=""></a>
+                        </li>
+                    </ul>
+                    <div class="bg"></div>
+                </div>
+            </div>
+            <div class="mainbox">
+                <div class="main_menu">
+                    <h2>Yogurt Icecream's Menu</h2>
+                </div>
+                <div class="menulist">
+                    <ul>
+                        <li><a href="">토핑</a></li>
+                        <li><a href="">시그니처</a></li>
+                        <li><a href="">요거트 아이스크림</a></li>
+                        <li><a href="">그릭요거트</a></li>
+                    </ul>
+                </div>
+                <div class="menulistbox">
+                    <div class="txt">
+                        <h3>TOPPING</h3>
+                        <p>CHOCO</p>
+                        <p>CHIPS</p>
+                        <p>FRUIT</p>
+                        <p>POPS</p>
+                    </div>
+                    <div class="imgbox">
+                        <ul>
+                            <img src="images/left.png" alt="">
+                        </ul>
+                        <ul>
+                            <li><img src="images/jam.png" alt="">
+                                <p>자몽</p>
+                            </li>
+                            <li><img src="images/name_box.png" alt=""></li>
+                            <p>상큼하고 달달한 빨간 생자몽!</p>
+                        </ul>
+                        <ul>
+                            <li><img src="images/str.png" alt=""></li>
+                            <li><img src="images/name_box.png" alt=""></li>
+                            <p>달콤함의 정석, 생딸기!</p>
+                        </ul>
+                        <ul>
+                            <li><img src="images/fin.png" alt=""></li>
+                            <li><img src="images/name_box.png" alt=""></li>
+                            <p>새콤달콤 이국적인 맛, 파인애플!</p>
+                        </ul>
+                        <ul>
+                            <li><img src="images/jam.png" alt=""></li>
+                            <li><img src="images/name_box.png" alt=""></li>
+                            <p>부드러운 달콤함, 바나나!</p>
+                        </ul>
+                        <ul>
+                            <img src="images/right.png" alt="">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <img src="images/backgroundall.png" alt="">
+                <img src="images/yyic.png" alt="">
+                <div class="text">
+                    <img src="images/menutxt.png" alt="">
+                </div>
+                <div class="allmenubox">
+                    <div class="menus">
+                        <div class="item"><img src="images/m1.png" alt="">
+                            <p>치즈큐브+딸기</p>
+                        </div>
+                        <div class="item"><img src="images/m2.png" alt="">
+                            <p>오렌지+자몽+벌집꿀</p>
+                        </div>
+                        <div class="item"><img src="images/m3.png" alt="">
+                            <p>민트팝팝</p>
+                        </div>
+                        <div class="item"><img src="images/m4.png" alt="">
+                            <p>후르츠링+샤인머스캣</p>
+                        </div>
+                        <div class="item"><img src="images/m5.png" alt="">
+                            <p>말린샤인머스캣+벌집꿀</p>
+                        </div>
+                        <div class="item"><img src="images/m6.png" alt="">
+                            <p>초콜릿</p>
+                        </div>
+                        <div class="item"><img src="images/m7.png" alt="">
+                            <p>자몽+후르츠링+벌집꿀</p>
+                        </div>
+                        <div class="item"><img src="images/m8.png" alt="">
+                            <p>초코쉘+딸기팝팝</p>
+                        </div>
+                        <div class="item"><img src="images/m9.png" alt="">
+                            <p>파인애플+키위+벌집꿀</p>
+                        </div>
+                        <div class="item"><img src="images/m10.png" alt="">
+                            <p>딸기</p>
+                        </div>
+                        <div class="item"><img src="images/m11.png" alt="">
+                            <p>민트팝팝세트</p>
+                        </div>
+                        <div class="item"><img src="images/m12.png" alt="">
+                            <p>오레오+오레오크럼블+몰티져스</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><img src="images/footer_01.png" alt=""></li>
+                    <li>주식회사 트릴리언즈 대표자 박진주 사업자번호 696-86-02195 주소 서울특별시 성동구 광나루로 130, 11층 1108호</li>
+                    <li>제휴 문의 awesomebrosis@naver.com</li>
+                    <li>Copyright ⓒ 요거트아이스크림의정석. all Right Reserved.</li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>
