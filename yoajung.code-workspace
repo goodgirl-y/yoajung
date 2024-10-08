@@ -1,11 +1,13 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "images"
-	}
-],
-  "settings": {}
+    {
+      "path": "."
+    },
+    {
+      "path": "images"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "yoajung"
+  }
 }
