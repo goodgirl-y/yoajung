@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pottfolio</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        body {
+            color: #fff;
+            font-family: "NexonLv1Gothic";
+            font-weight: 300;
+            background-color: #000;
+        }
+        #parallax__title {
+            position: fixed;
+            left: 20px;
+            top: 150px;
+            z-index: 1000;
+        }
+        #parallax__title p {
+            font-size: 17px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #parallax__title ul {
+            margin-top: 40px;
+        }
+        #parallax__title li {
+            display: inline;
+        }
+        #parallax__title li a {
+            width: 190px; 
+            height: 30px;
+            display: flex;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+            transition: all 0.3s; /* Transition 추가 */
+        }
+        .highlight {
+            color: #fff; /* 선택된 색상 */
+            font-size: 17px; /* 선택된 텍스트 크기 */
+            opacity: 1; /* 불투명도 */
+        }
+        /* parallax__cont */
+        #parallax__cont {
+            max-width: 1600px;
+            width: 98%;
+            margin: 0 auto;
+        }
+        .parallax__item {
+            width: 1000px;
+            max-width: 70vw;
+            margin: 30vw auto;
+            position: relative;
+            padding-top: 15vw;
+            left: 160px;
+            display: flex;
+            height: 100vh;
+        }
+        .parallax__item:nth-child(even) {
+            text-align: right;
+        }
+        .parallax__item__num {
+            font-size: 15vw;
+            position: absolute;
+            left: -5vw;
+            top: -2vw;
+            opacity: 0.07;
+            font-family: "Lato";
+            font-weight: bold;
+        }
+        .parallax__item__title {
+            padding-bottom: 2px;
+            font-weight: 400;
+            font-size: 40px;
+        }
+        .parallax__item__imgWrap {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .parallax__item__img {
+            position: absolute;
+            left: -5%; 
+            top: -5%;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+        .parallax__item__img:hover {
+            transform: scale(1.025);
+        }
+        #section1 .parallax__item__img {
+        }
+        #section2 .parallax__item__img {
+        }
+        #section3 .parallax__item__img {
+        }
+        #section4 .parallax__item__img {
+        }
+        #section5 .parallax__item__img {
+        }
+    </style>
+</head>
+<body>
+    <header id="parallax__title">
+        <p>contents</p>
+        <ul>
+            <li><a href="#section1" aria-label="요아정 메인 페이지">01 요아정 main page</a></li>
+            <li><a href="#section2" aria-label="요아정 메뉴 페이지">02 요아정 menu page</a></li>
+            <li><a href="#section3" aria-label="요아정 모바일">03 요아정 mobile</a></li>
+            <li><a href="#section4" aria-label="클론 로메인">04 클론 [로메인]</a></li>
+            <li><a href="#section5" aria-label="디자인">05 디자인</a></li>
+        </ul>
+    </header>
+
+    <main id="parallax__cont">
+        <section id="section1" class="parallax__item" data-bgcolor="#111">
+            <span class="parallax__item__num">01</span>
+            <h2 class="parallax__item__title">요아정 yoajung main page</h2>
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img"></div>
+            </figure>
+            <p class="parallax__item__desc">web redesign</p>
+        </section>
+
+        <section id="section2" class="parallax__item" data-bgcolor="#222">
+            <span class="parallax__item__num">02</span>
+            <h2 class="parallax__item__title">web redesign</h2>
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img"></div>
+            </figure>
+            <p class="parallax__item__desc">dfdf</p>
+        </section>
+
+        <section id="section3" class="parallax__item" data-bgcolor="#333333">
+            <span class="parallax__item__num">03</span>
+            <h2 class="parallax__item__title">web redesign</h2>
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img"></div>
+            </figure>
+            <p class="parallax__item__desc">dfdf</p>
+        </section>
+
+        <section id="section4" class="parallax__item" data-bgcolor="#444444">
+            <span class="parallax__item__num">04</span>
+            <h2 class="parallax__item__title">colon</h2>
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img"></div>
+            </figure>
+            <p class="parallax__item__desc">sdsd</p>
+        </section>
+
+        <section id="section5" class="parallax__item" data-bgcolor="#555555">
+            <span class="parallax__item__num">05</span>
+            <h2 class="parallax__item__title">design</h2>
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img"></div>
+            </figure>
+            <p class="parallax__item__desc">af</p>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    
+    
+    
+
+    <script>
+        //스크롤 페이지
+        let currentSection = 0;
+        const section =
+        document.querySelectorAll('section');
+        const totalSections = sections.length;
+
+        window.addEventListener('wheel',(event) => {
+            if (event.deltaY > 0){
+                //스크롤을 아래로 할때
+                currentSection = Math.min(currentSection + 1, totalSections -1);
+            } else{
+                //스크롤을 위로 할 때
+                currentSection = Math.max(currentSection - 1,0);
+            }
+            sections[currentSection].scrollntoView({
+                behavior:'smooth'
+            });
+        });
+
+
+        // ScrollTrigger 설정
+        ScrollTrigger.create({
+            start: "top -80",
+            end: 99999,
+            toggleClass: {
+                className: "is-active",
+                targets: "#parallax__nav"
+            }
+        });
+    
+        const titleLinks = document.querySelectorAll('#parallax__title li a');
+    
+        titleLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // 모든 링크에서 highlight 클래스 제거
+                titleLinks.forEach(l => {
+                    l.classList.remove('highlight'); // 강조 효과 제거
+                    l.style.fontSize = '12px'; // 기본 텍스트 크기
+                    l.style.opacity = '0.7'; // 기본 불투명도
+                });
+                // 클릭한 링크에 highlight 클래스 추가
+                this.classList.add('highlight'); // 강조 효과 추가
+            });
+        });
+    
+        // 각 섹션에 대한 배경색 변경 설정
+        gsap.utils.toArray(".parallax__item").forEach((item) => {
+            let color = item.getAttribute("data-bgcolor");
+    
+            ScrollTrigger.create({
+                trigger: item,
+                start: "top 50%",
+                end: "bottom 5%",
+                markers: false, // 개발 중에만 표시하고 싶다면 true로 변경
+    
+                onEnter: () => gsap.to("body", {
+                    backgroundColor: color,
+                    duration: 1.4
+                }),
+                onEnterBack: () => gsap.to("body", {
+                    backgroundColor: color,
+                    duration: 1.4
+                }),
+            });
+        });
+    </script>
+    

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Snap Page</title>
+    <link rel="stylesheet" href="">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.first-page, .last-page {
+    background-color: #f0f0f0;
+}
+
+.content-page {
+    display: flex;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.fixed-left-box {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30%;
+    background-color: #ffedcc;
+    padding: 20px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-box {
+    width: 70%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box {
+    background-color: #d3d3f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 고정된 텍스트 박스 -->
+        <div class="fixed-left-box">
+            <p id="fixed-text">ㄹㅇㄴ</p>
+        </div>
+
+        <!-- 첫 번째 페이지 -->
+        <section class="page first-page">
+            <h1>borim</h1>
+            <h1>portfolio</h1>
+        </section>
+
+        <!-- 두 번째 페이지부터 다섯 번째 페이지까지 -->
+        <section class="page content-page" data-text="다람쥐가">
+            <div class="right-box">
+                <div class="box">박스 1</div>
+            </div>
+        </section>
+
+        <section class="page content-page" data-text="나무에서">
+            <div class="right-box">
+                <div class="box">박스 1</div>
+            </div>
+        </section>
+
+        <section class="page content-page" data-text="떨어질때도">
+            <div class="right-box">
+                <div class="box">박스 1</div>
+            </div>
+        </section>
+
+        <section class="page content-page" data-text="있듯이">
+            <div class="right-box">
+                <div class="box">박스 1</div>
+            </div>
+        </section>
+
+        <!-- 마지막 페이지 -->
+        <section class="page last-page">
+            <h1>Thank you</h1>
+            <p>프로필 다시보기</p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+   window.addEventListener('scroll', function() {
+    const pages = document.querySelectorAll('.content-page');
+    const fixedText = document.getElementById('fixed-text');
+
+    let foundPage = false;
+
+    pages.forEach(page => {
+        const rect = page.getBoundingClientRect();
+        // 페이지가 화면의 상단에서 하단까지 어느 정도 보일 때도 텍스트 변경
+        if (rect.top < window.innerHeight && rect.bottom > 0 && !foundPage) {
+            fixedText.textContent = page.dataset.text;
+            foundPage = true;
+        }
+    });
+
+    // 첫 번째 페이지 또는 마지막 페이지에서 고정된 텍스트 박스 내용 변경
+    const firstPage = document.querySelector('.first-page');
+    const lastPage = document.querySelector('.last-page');
+    
+    if (firstPage.getBoundingClientRect().top >= 0) {
+        fixedText.textContent = 'ㄹㅇㄴ';  // 첫 번째 페이지의 기본 텍스트
+    } else if (lastPage.getBoundingClientRect().top < window.innerHeight) {
+        fixedText.textContent = '';  // 마지막 페이지에서는 텍스트 숨기기
+    }
+});
+
+
+</script>
+</html>
